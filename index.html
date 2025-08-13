@@ -1,64 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balkrishna Jha | Resume</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Roboto', sans-serif; background-color: #f9fafb; }
-        .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn 1s forwards; }
-        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balkrishna Jha - Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior: smooth; }
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+    background-size: 800% 800%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 25px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #8e44ad;
+    transition: transform 0.7s;
+}
+
+.profile-img:hover { transform: scale(1.1) rotate(5deg); }
+
+.name {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #8e44ad;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+/* Section Titles */
+h2 {
+    color: #8e44ad;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content:'';
+    position:absolute;
+    width:50%;
+    height:3px;
+    background:#8e44ad;
+    left:0; bottom:-5px;
+    border-radius:3px;
+}
+
+section { margin-bottom: 40px; animation: fadeUp 1.5s ease forwards; }
+
+@keyframes fadeUp {
+    0%{opacity:0; transform:translateY(20px);}
+    100%{opacity:1; transform:translateY(0);}
+}
+
+/* Cards */
+.card {
+    background:#f7f3fa;
+    padding:20px;
+    border-radius:20px;
+    margin-bottom:15px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover { transform: translateY(-7px) scale(1.02); box-shadow:0 15px 35px rgba(0,0,0,0.15); }
+
+/* List Styles */
+ul { list-style:none; padding-left:0; display:flex; flex-wrap:wrap; gap:10px; }
+ul li {
+    background:#fff;
+    padding:10px 15px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, background 0.3s;
+}
+
+ul li:hover { transform: translateY(-5px); background: #8e44ad; color:#fff; }
+
+/* Contact */
+.contact-item { margin-bottom:12px; display:flex; align-items:center; gap:10px; font-size:1rem; }
+.contact-item i { color:#8e44ad; }
+.contact-item span { font-weight:600; }
+
+/* Responsive */
+@media(max-width:600px){
+    .container { margin:20px; padding:15px; }
+    .name { font-size:2rem; }
+    ul { flex-direction:column; }
+}
+</style>
 </head>
-<body class="flex justify-center items-center min-h-screen p-4">
-    <div class="bg-white shadow-xl rounded-2xl p-8 max-w-xl w-full fade-in">
-        <!-- Header -->
-        <div class="text-center mb-6">
-            <h1 class="text-3xl font-bold text-gray-800">Balkrishna Jha</h1>
-            <p class="text-gray-600">Information Technology Student | Aspiring Web Developer</p>
-        </div>
+<body>
 
-        <!-- Contact -->
-        <div class="flex justify-center gap-6 mb-6 text-gray-700">
-            <p>Email: <a href="mailto:example@email.com" class="text-blue-500 hover:underline">example@email.com</a></p>
-            <p>Phone: +91-XXXXXXXXXX</p>
-        </div>
-
-        <!-- Education -->
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-2">Education</h2>
-            <p>SRMCEM, Lucknow — B.Tech IT</p>
-            <p>2023 - Present</p>
-        </div>
-
-        <!-- Skills -->
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-2">Skills</h2>
-            <div class="flex flex-wrap gap-2">
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">HTML</span>
-                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">CSS</span>
-                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">JavaScript</span>
-                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full">Python</span>
-                <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full">React</span>
-            </div>
-        </div>
-
-        <!-- Experience -->
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-2">Projects & Experience</h2>
-            <ul class="list-disc list-inside text-gray-700">
-                <li>Portfolio Website — HTML, CSS, JS</li>
-                <li>Simple Chat App — React & Firebase</li>
-                <li>Data Visualization Project — Python & Matplotlib</li>
-            </ul>
-        </div>
-
-        <!-- Footer -->
-        <div class="text-center text-gray-500 mt-8">
-            <p>© 2025 Balkrishna Jha. All rights reserved.</p>
-        </div>
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <img src="balkrishna-photo.jpg" alt="Balkrishna Jha" class="profile-img">
+        <h1 class="name">Balkrishna Jha</h1>
+        <p class="title">BTech IT Student</p>
     </div>
+
+    <!-- About Me -->
+    <section>
+        <h2>About Me</h2>
+        <p>I am a Second-year BTech student in Information Technology, eager to learn and develop new skills. I am seeking opportunities to gain practical experience, contribute to projects, and enhance my technical knowledge while growing professionally.</p>
+    </section>
+
+    <!-- Education -->
+    <section>
+        <h2>Education</h2>
+        <div class="card"><strong>B.Tech (IT)</strong> - SRMCEM LUCKNOW<br>Session: 2024-2028</div>
+        <div class="card"><strong>Intermediate</strong> - DR. RMLS COLLEGE MUZAFFARPUR<br>Session: 2022-2024</div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li>MS Word</li>
+            <li>MS Excel</li>
+            <li>PowerPoint</li>
+            <li>Internet Research</li>
+            <li>Basic Computer Operations</li>
+            <li>Typing</li>
+            <li>Time Management</li>
+            <li>Adaptability</li>
+        </ul>
+    </section>
+
+    <!-- Projects -->
+    <section>
+        <h2>Projects</h2>
+        <div class="card">GitHub Profile Setup and Live Link<br>Currently working on other projects</div>
+    </section>
+
+    <!-- Experience -->
+    <section>
+        <h2>Experience</h2>
+        <div class="card">No professional work experience yet. Actively seeking opportunities to gain practical exposure.</div>
+    </section>
+
+    <!-- Languages -->
+    <section>
+        <h2>Languages</h2>
+        <ul>
+            <li>Hindi (Fluent)</li>
+            <li>English (Basic)</li>
+        </ul>
+    </section>
+
+    <!-- Contact -->
+    <section>
+        <h2>Contact</h2>
+        <div class="contact-item"><i class="fa fa-phone"></i> <span>Phone:</span> 6207480364</div>
+        <div class="contact-item"><i class="fa fa-envelope"></i> <span>Email:</span> balkrishnajha201@gmail.com</div>
+        <div class="contact-item"><i class="fa fa-map-marker-alt"></i> <span>Location:</span> LUCKNOW, UP, INDIA</div>
+    </section>
+</div>
+
 </body>
 </html>
