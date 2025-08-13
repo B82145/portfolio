@@ -3,119 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balkrishna Jha - Resume</title>
+    <title>Balkrishna Jha | Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        .header {
-            text-align: center;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        .contact p {
-            margin: 5px 0;
-        }
-        .footer {
-            text-align: center;
-            font-size: 14px;
-            color: #777;
-            margin-top: 20px;
-        }
+        body { font-family: 'Roboto', sans-serif; background-color: #f9fafb; }
+        .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn 1s forwards; }
+        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body>
-    <div class="container">
+<body class="flex justify-center items-center min-h-screen p-4">
+    <div class="bg-white shadow-xl rounded-2xl p-8 max-w-xl w-full fade-in">
         <!-- Header -->
-        <div class="header">
-            <h1>Balkrishna Jha</h1>
-            <p>B.Tech IT Student (Learning Web Development)</p>
-        </div>
-
-        <!-- About Me -->
-        <div class="section">
-            <h2>About Me</h2>
-            <p>I am a Second-year B.Tech student in Information Technology, eager to learn and develop new skills. I am seeking opportunities to gain practical experience, contribute to projects, and enhance my technical knowledge while growing professionally.</p>
-        </div>
-
-        <!-- Education -->
-        <div class="section">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Current Education:</strong> B.Tech in Information Technology - SRMCEM Lucknow (2024–2028)</li>
-                <li><strong>12th:</strong> DR. RMLS College Muzaffarpur (2022–2024) - Intermediate</li>
-            </ul>
-        </div>
-
-        <!-- Skills -->
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>MS Word</li>
-                <li>MS Excel</li>
-                <li>PowerPoint</li>
-                <li>Internet Research</li>
-                <li>Basic Computer Operations</li>
-                <li>Typing</li>
-                <li>Time Management</li>
-                <li>Adaptability</li>
-            </ul>
-        </div>
-
-        <!-- Projects -->
-        <div class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li>Created GitHub profile and made it live. Currently working on upcoming projects.</li>
-            </ul>
-        </div>
-
-        <!-- Experience -->
-        <div class="section">
-            <h2>Experience</h2>
-            <p>No professional work experience yet. Actively seeking opportunities to gain practical exposure.</p>
-        </div>
-
-        <!-- Languages -->
-        <div class="section">
-            <h2>Languages</h2>
-            <ul>
-                <li>Hindi (Fluent)</li>
-                <li>English (Basic)</li>
-            </ul>
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-gray-800">Balkrishna Jha</h1>
+            <p class="text-gray-600">Information Technology Student | Aspiring Web Developer</p>
         </div>
 
         <!-- Contact -->
-        <div class="section contact">
-            <h2>Contact Information</h2>
-            <p><strong>Phone:</strong> 6207480364</p>
-            <p><strong>Email:</strong> <a href="mailto:balkrishnajha201@gmail.com">balkrishnajha201@gmail.com</a></p>
-            <p><strong>Location:</strong> Lucknow, UP, India</p>
+        <div class="flex justify-center gap-6 mb-6 text-gray-700">
+            <p>Email: <a href="mailto:example@email.com" class="text-blue-500 hover:underline">example@email.com</a></p>
+            <p>Phone: +91-XXXXXXXXXX</p>
         </div>
 
-        <div class="footer">
-            &copy; 2025 Balkrishna Jha | All Rights Reserved
+        <!-- Education -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2">Education</h2>
+            <p>SRMCEM, Lucknow — B.Tech IT</p>
+            <p>2023 - Present</p>
+        </div>
+
+        <!-- Skills -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2">Skills</h2>
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">HTML</span>
+                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">CSS</span>
+                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">JavaScript</span>
+                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full">Python</span>
+                <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full">React</span>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2">Projects & Experience</h2>
+            <ul class="list-disc list-inside text-gray-700">
+                <li>Portfolio Website — HTML, CSS, JS</li>
+                <li>Simple Chat App — React & Firebase</li>
+                <li>Data Visualization Project — Python & Matplotlib</li>
+            </ul>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center text-gray-500 mt-8">
+            <p>© 2025 Balkrishna Jha. All rights reserved.</p>
         </div>
     </div>
 </body>
